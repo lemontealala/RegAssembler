@@ -49,5 +49,8 @@ We have tested RegAssembler on both simulated and real data. A comparsion with c
 | LA90                         | 1                      | 1                      | -                      |
 | LGA90                        | 1                      | 1                      | -                      |
 
+## Usage
+The following RegAssembler.sh provides a example for runing RegAssembler, where '-r' specifies the long reads input, '-m' specifies the self-mapping results from minimap2. Usages for other arguments can be known by '-h' command.
+`python RegAssembler.py -r test_data/Celegans_chr1_simul_Q10_0001.fasta -m test_data/minimap2_Q10_simu.paf -p '_' -sd 1500 -bw 3000 -HO 150 -t 40 -C -o Celegans.fa > RegAssembler.log`
 
 
