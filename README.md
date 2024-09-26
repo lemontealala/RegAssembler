@@ -7,7 +7,7 @@ The workflow of RegAssembler contains four major modules.
 3. The splitting and iterating module. Though robust regression is applied, a few unrecognized false overlaps may bond together multiple strains from different genomic regions. RegAssembler then split regression results to obtain conflict-free linear contigs by verifing eligible overlaps between adjacent reads. By replacing the raw reads with the resulted contigs (pre-contigs), RegAssembler iterates the assembly module on contig level to obtain longer contigs. In the iteration, RegAssembler inherits the overlaps between long reads positioned at only ends of the contigs as overlaps between contigs. Thus a bigger contig graph is constructed and longer contigs are assembled by orientating and positioning pre-contigs. Consequently, long chromosomes can be reconstructed by iteration.
 4. The consensus module. RegAssembler extract final consensus by a block POA algorithm. Each contig is segmented into several blocks with a fixed bandwidth. Reads in each block are multi-aligned by the Patitial order alignment(POA) algorithm. The POA algorithm is implemented in parallel so that the consensus module is as effective as accuracy.
 
-We have tested RegAssembler on both simulated and real data. A comparsion with canu and wtdgb2 on C .elegans chromosome 1 is exhibited in the following table. The quality index are from QUAST 5.2.0.
+We have tested RegAssembler on both simulated and real data. A comparsion with canu and wtdgb2 on C .elegans chromosome 1 is exhibited in the following table. The quality indexes are from QUAST 5.2.0.
 
 | Metric                      | RegAssembler | Canu | wtdgb2 |
 |-----------------------------|------------------------|------------------------|------------------------|
